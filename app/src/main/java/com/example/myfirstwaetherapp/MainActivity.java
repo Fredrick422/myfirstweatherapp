@@ -33,8 +33,8 @@ import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String OPEN_WEATHER_MAP_URL = "http://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&units=metric";
-    private static final String OPEN_WEATHER_MAP_API = "fa32cb829f85c0689aedf04047a9dafa";
+    private static final String OPEN_WEATHER_MAP_URL = BuildConfig.OPEN_WEATHER_URL;
+    private static final String OPEN_WEATHER_MAP_API = BuildConfig.OPEN_WEATHER_API_KEY;
 
     TextView cityField, detailsField, currentTemperatureField, humidityField, pressureField, weatherIcon, updateField;
     Typeface weatherFont;

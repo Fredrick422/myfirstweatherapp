@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+def appPropertiesFile = rootProject.file("app.properties")
+def appProperties = new Properties()
+appProperties.load(new FileInputStream(appPropertiesFile))
 
 android {
     compileSdkVersion 29
@@ -8,9 +11,12 @@ android {
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "OPEN_WEATHER_URL", appProperties['OPEN_WEATHER_URL'])
+        buildConfigField("String", "OPEN_WEATHER_API_KEY", appProperties['OPEN_WEATHER_API_KEY'])
     }
 
     buildTypes {

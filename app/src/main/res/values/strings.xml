@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My First Waether App</string>
+    <string name="Test">new test</string>
 </resources>
